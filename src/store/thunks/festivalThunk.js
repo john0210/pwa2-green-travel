@@ -4,16 +4,18 @@ import axios from "axios";
 
 const festivalIndex = createAsyncThunk(
   'festivalSlice/festivalIndex',
-  async () => {
-    const url = `${axiosConfig.baseUrl}/searchFestival2`;
+  async (page) => {
+    const url = `${axiosConfig.BASE_URL}/searchFestival2`;
     const config = {
      params: {
-      serviceKey: axiosConfig.serviceKey,
-      MobileOS : axiosConfig.MobileOS,
-      MobileApp : axiosConfig.MobileApp,
-      _type: axiosConfig.type,
-      arrange: axiosConfig.arrange,
+      serviceKey: axiosConfig.SERVICE_KEY,
+      MobileOS : axiosConfig.MOBILE_OS,
+      MobileApp : axiosConfig.MOBILE_App,
+      _type: axiosConfig.TYPE,
+      arrange: axiosConfig.ARRANGE,
+      numOfRows: axiosConfig.NUM_OF_ROWS,
       eventStartDate: '20250401',
+      pageNo: page,
     }
   }
   // config 내부의 params로 수업, 익숙해지면, 디스트럭처링 문법
