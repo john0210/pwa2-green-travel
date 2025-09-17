@@ -1,7 +1,10 @@
-import { KEY_LOCALSTORAGE_FESTIVAL_FLG, KEY_LOCALSTORAGE_FESTIVAL_LIST, KEY_LOCALSTORAGE_FESTIVAL_PAGE } from "../configs/keys.js";
+import { KEY_LOCALSTORAGE_CLEAT_DATE, KEY_LOCALSTORAGE_FESTIVAL_FLG, KEY_LOCALSTORAGE_FESTIVAL_LIST, KEY_LOCALSTORAGE_FESTIVAL_PAGE } from "../configs/keys.js";
 
 export const localStorageUtil = {
 
+  clearLocalstorage: () => {
+    localStorage.clear();
+  },
   // 책임 중심적 설계시 코드 작성 방법
   setFestivalList: (data) => {
     localStorage.setItem(KEY_LOCALSTORAGE_FESTIVAL_LIST, JSON.stringify(data));
@@ -46,6 +49,23 @@ export const localStorageUtil = {
   getFestivalScrollFlg: () => {
     return JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE_FESTIVAL_FLG));
   },
+
+
+  /**
+   * 로컬스토리지에 로컬스토리지 클리어 날짜 저장
+   * @param {string} dateYMD 
+   */
+  setClearDate: (dateYMD) => {
+    localStorage.setItem(KEY_LOCALSTORAGE_CLEAT_DATE, dateYMD);
+  },
+  /**
+   * 로컬스토리지의 로컬스토리지 클리어 날짜 반환
+   * @returns {string | null}
+   */
+  getClearDate: () => {
+    return localStorage.getItem(KEY_LOCALSTORAGE_CLEAT_DATE);
+  }
+
   // 역할 중심적 설계시 코드 작성 방법
   // setLocalStorage: (key, data) => {
   //   localStorage.setItem(key, JSON.stringify(data));
