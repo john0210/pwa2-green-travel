@@ -18,7 +18,7 @@ function BeforInstallPrompt() {
       // 유저의 응답(accepted | dismissed)을 기다리기
       const result = await defferdPrompt.userChoice;
 
-      if(result === 'accepted') {
+      if(result.outcome === 'accepted') {
         console.log('동의');
       } else {
         console.log('거부');
