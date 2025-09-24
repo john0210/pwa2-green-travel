@@ -5,7 +5,8 @@ function Main() {
   const navigate = useNavigate();
   return(
     <>
-      <img className='title-img' onClick={() => { navigate ('/festivals')}} src='/base/1.jpg' alt="대문" />
+      <img className='title-img' onClick={() => { navigate ('/festivals')}} src='/base/1-1.jpg' alt="대문상" />
+      <img className='title-second-img' onClick={() => { navigate ('/stays')}} src='/base/1-2.jpg' alt="대문하" />
     </>
   )
 }

@@ -4,3 +4,12 @@
   width: 100%;
   max-width: 500px;
 }
+
+.title-second-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}

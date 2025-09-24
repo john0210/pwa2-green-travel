@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.card-img {
+  padding-top: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-title {
+  font-size: 32px;
+}
+
+.card-address {
+  font-size: 17px;
+}
+
+.card-tel {
+  font-size: 19px;
+}
